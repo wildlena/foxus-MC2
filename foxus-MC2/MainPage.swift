@@ -2,7 +2,7 @@
 //  MainPage.swift
 //  foxus-MC2
 //
-//  Created by leena alyami on 12/05/1445 AH.
+//  Created by AlJawharh AlOtaibi on 14/05/1445 AH.
 //
 
 import SwiftUI
@@ -42,6 +42,4 @@ struct MainPage: View {
     }
 }
 
-#Preview {
-    MainPage()
-}
+import Foundation
