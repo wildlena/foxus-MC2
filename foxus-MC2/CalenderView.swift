@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct CalenderView: View {
+    @Environment (\.presentationMode) var presentationMode
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+       ZStack{
+            Color(.white).ignoresSafeArea(.all)
+                .navigationBarHidden(true)
+            
+            
+          
+            VStack(alignment: .leading){
+               HStack{Spacer()}
+                
+                Button("Back"){
+                    presentationMode.wrappedValue.dismiss()
+                    
+                }.padding(.leading)
+                Spacer()
+          }
+        
+               
+        }
+            
+        
+        
     }
 }
 

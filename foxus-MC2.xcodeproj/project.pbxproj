@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33063AB52B14AD57002763A8 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB42B14AD57002763A8 /* CalenderView.swift */; };
+		33063AB72B14BE07002763A8 /* MainPageReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB62B14BE07002763A8 /* MainPageReview.swift */; };
 		33F31C902B0E27710024FF95 /* foxus_MC2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C8F2B0E27710024FF95 /* foxus_MC2App.swift */; };
 		33F31C922B0E27710024FF95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C912B0E27710024FF95 /* ContentView.swift */; };
 		33F31C942B0E27720024FF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F31C932B0E27720024FF95 /* Assets.xcassets */; };
 		33F31C972B0E27720024FF95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F31C962B0E27720024FF95 /* Preview Assets.xcassets */; };
-		33F31C992B0E27720024FF95 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C982B0E27720024FF95 /* Persistence.swift */; };
 		33F31C9C2B0E27720024FF95 /* foxus_MC2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C9A2B0E27720024FF95 /* foxus_MC2.xcdatamodeld */; };
-		33F31CA82B0E27730024FF95 /* foxus_MC2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31CA72B0E27730024FF95 /* foxus_MC2Tests.swift */; };
-		33F31CB22B0E27730024FF95 /* foxus_MC2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31CB12B0E27730024FF95 /* foxus_MC2UITests.swift */; };
-		33F31CB42B0E27730024FF95 /* foxus_MC2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31CB32B0E27730024FF95 /* foxus_MC2UITestsLaunchTests.swift */; };
+		33F31CC12B0E40A90024FF95 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31CC02B0E40A90024FF95 /* SplashScreenView.swift */; };
+		33F31CC32B0E41160024FF95 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31CC22B0E41160024FF95 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +36,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33063AB42B14AD57002763A8 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		33063AB62B14BE07002763A8 /* MainPageReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageReview.swift; sourceTree = "<group>"; };
 		33F31C8C2B0E27710024FF95 /* foxus-MC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foxus-MC2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F31C8F2B0E27710024FF95 /* foxus_MC2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foxus_MC2App.swift; sourceTree = "<group>"; };
 		33F31C912B0E27710024FF95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33F31C932B0E27720024FF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F31C962B0E27720024FF95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		33F31C982B0E27720024FF95 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		33F31C9B2B0E27720024FF95 /* foxus_MC2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = foxus_MC2.xcdatamodel; sourceTree = "<group>"; };
 		33F31C9D2B0E27720024FF95 /* foxus_MC2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = foxus_MC2.entitlements; sourceTree = "<group>"; };
 		33F31C9E2B0E27720024FF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33F31CA32B0E27730024FF95 /* foxus-MC2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "foxus-MC2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33F31CA72B0E27730024FF95 /* foxus_MC2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foxus_MC2Tests.swift; sourceTree = "<group>"; };
 		33F31CAD2B0E27730024FF95 /* foxus-MC2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "foxus-MC2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33F31CB12B0E27730024FF95 /* foxus_MC2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foxus_MC2UITests.swift; sourceTree = "<group>"; };
-		33F31CB32B0E27730024FF95 /* foxus_MC2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foxus_MC2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33F31CC02B0E40A90024FF95 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		33F31CC22B0E41160024FF95 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				33F31C8E2B0E27710024FF95 /* foxus-MC2 */,
-				33F31CA62B0E27730024FF95 /* foxus-MC2Tests */,
-				33F31CB02B0E27730024FF95 /* foxus-MC2UITests */,
 				33F31C8D2B0E27710024FF95 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,8 +100,11 @@
 			children = (
 				33F31C8F2B0E27710024FF95 /* foxus_MC2App.swift */,
 				33F31C912B0E27710024FF95 /* ContentView.swift */,
+				33F31CC02B0E40A90024FF95 /* SplashScreenView.swift */,
+				33F31CC22B0E41160024FF95 /* OnBoardingView.swift */,
+				33063AB62B14BE07002763A8 /* MainPageReview.swift */,
+				33063AB42B14AD57002763A8 /* CalenderView.swift */,
 				33F31C932B0E27720024FF95 /* Assets.xcassets */,
-				33F31C982B0E27720024FF95 /* Persistence.swift */,
 				33F31C9D2B0E27720024FF95 /* foxus_MC2.entitlements */,
 				33F31C9E2B0E27720024FF95 /* Info.plist */,
 				33F31C9A2B0E27720024FF95 /* foxus_MC2.xcdatamodeld */,
@@ -118,23 +119,6 @@
 				33F31C962B0E27720024FF95 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		33F31CA62B0E27730024FF95 /* foxus-MC2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				33F31CA72B0E27730024FF95 /* foxus_MC2Tests.swift */,
-			);
-			path = "foxus-MC2Tests";
-			sourceTree = "<group>";
-		};
-		33F31CB02B0E27730024FF95 /* foxus-MC2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				33F31CB12B0E27730024FF95 /* foxus_MC2UITests.swift */,
-				33F31CB32B0E27730024FF95 /* foxus_MC2UITestsLaunchTests.swift */,
-			);
-			path = "foxus-MC2UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F31C9C2B0E27720024FF95 /* foxus_MC2.xcdatamodeld in Sources */,
-				33F31C992B0E27720024FF95 /* Persistence.swift in Sources */,
 				33F31C922B0E27710024FF95 /* ContentView.swift in Sources */,
 				33F31C902B0E27710024FF95 /* foxus_MC2App.swift in Sources */,
+				33063AB72B14BE07002763A8 /* MainPageReview.swift in Sources */,
+				33063AB52B14AD57002763A8 /* CalenderView.swift in Sources */,
+				33F31CC32B0E41160024FF95 /* OnBoardingView.swift in Sources */,
+				33F31CC12B0E40A90024FF95 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F31CA82B0E27730024FF95 /* foxus_MC2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +272,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F31CB22B0E27730024FF95 /* foxus_MC2UITests.swift in Sources */,
-				33F31CB42B0E27730024FF95 /* foxus_MC2UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"foxus-MC2/Preview Content\"";
+				DEVELOPMENT_TEAM = Z4SG6JS8SL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "foxus-MC2/Info.plist";
@@ -465,6 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"foxus-MC2/Preview Content\"";
+				DEVELOPMENT_TEAM = Z4SG6JS8SL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "foxus-MC2/Info.plist";
