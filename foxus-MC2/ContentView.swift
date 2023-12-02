@@ -4,6 +4,8 @@
 //  Created by AlJawharh AlOtaibi on 09/05/1445 AH.
 //
 import SwiftUI
+import UIKit
+
 struct Task: Identifiable {
     var id = UUID()
     var name: String
@@ -35,29 +37,76 @@ struct ContentView: View {
     @State private var taskTime = Date() // Change to Date type
     @State private var selectedPriority: Priority? = nil
     @State private var tasks: [Task] = []
+    @State private var historyView: Bool = false
+    @State var selection: Int = 0
+    @State var searchTerm = ""
+    @State var isSearching = false
+    let subtitle: String = "Whack the unexpected, seize the day"
+
     var body: some View {
         NavigationView {
-            VStack {
-                List(tasks) { task in
-                    TaskCardView(task: task)
+            ZStack{
+                VStack {
+                    VStack(alignment: .leading){
+                        HStack{Spacer()}
+                        
+                        
+                        Text(subtitle)
+                            .font(.subheadline).padding(.leading)
+                        
+                        
+                        Picker("Choose a side",selection: $selection ) {
+                            Text("Upcoming").tag(0)
+                            Text("Completed").tag(1)
+                        }.padding(0).padding()
+                            .pickerStyle(SegmentedPickerStyle())
+                            .padding(.top, 10)
+                        
+                        if(selection == 0){
+                            List(tasks) { task in
+                                TaskCardView(task: task)
+                            }
+                        }
+                
+                        Spacer()
+                        
+                    }
+                    Spacer()
+                    
+                    Button(action: {
+                        isShowingSheet.toggle()
+                    }) {
+                        Text("New Task")
+                            .font(.headline)
+                            .frame(width: 300, height: 50)
+                            .foregroundColor(.white)
+                            .background(Color.customColor)
+                            .cornerRadius(10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 4)
+                    }
+                    .padding()
                 }
                 
-                Spacer()
+              //  Color("Primarycolor").edgesIgnoringSafeArea(.all)
                 
-                Button(action: {
-                    isShowingSheet.toggle()
-                }) {
-                    Text("New Task")
-                        .font(.headline)
-                        .frame(width: 300, height: 50)
-                        .foregroundColor(.white)
-                        .background(Color.customColor)
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 4)
+                .navigationTitle("Good Morning,")
+                .navigationBarBackButtonHidden(true)
+                //            .navigationBarTitleDisplayMode(.automatic)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        
+                        NavigationLink(destination: CalenderView()) {
+                            VStack {
+                                
+                                Image("LOGO 1")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                
+                            }
+                        }
+                    }
                 }
-                .padding()
             }
-            .navigationBarTitle("Good Morning")
         }
         .sheet(isPresented: $isShowingSheet) {
             TaskInputSheet(isPresented: $isShowingSheet, taskName: $taskName, taskTime: $taskTime, selectedPriority: $selectedPriority, tasks: $tasks)
@@ -154,21 +203,57 @@ struct TaskInputSheet: View {
 }
 struct TaskCardView: View {
     var task: Task
+    @State private var isChecked: Bool = false
     var body: some View {
+        HStack{
         VStack(alignment: .leading) {
             Text("Name: \(task.name)")
             Text("Time: \(formattedTime(task.time))") // Display formatted time
-            Text("Priority: \(task.priority.rawValue)")
+            Text("Priority: \(task.priority.rawValue)")}
+                .padding()
+                           .background(Color.gray.opacity(0.1))
+                           .cornerRadius(15)
+                           .padding([.horizontal, .bottom])
+                       
+            
+            Button(action: {
+                isChecked.toggle()
+            }) {
+                Text("DONE!")
+            }
+            .buttonStyle(CheckboxStyle(isChecked: $isChecked))
+            
         }
-        .padding()
-        .background(Color.gray.opacity(0.1))
-        .cornerRadius(15)
-        .padding([.horizontal, .bottom])
-    }
+        .swipeActions {
+                Button(role:.destructive) {
+                    print("Delete")
+                }label:{
+                    Label("Delete", systemImage: "trash.circle.fill")
+                }
+            Button {
+                print("Edit")
+            }label:{
+                Label("Edit", systemImage: "pencil")
+                }
+            .tint(.green)
+              }
+            }
+    
     private func formattedTime(_ time: Date) -> String {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         return formatter.string(from: time)
+    }
+}
+struct CheckboxStyle: ButtonStyle {
+    @Binding var isChecked: Bool
+
+    func makeBody(configuration: Configuration) -> some View {
+        return HStack {
+            Image(systemName: isChecked ? "checkmark.square.fill" : "square")
+                .foregroundColor(isChecked ? .blue : .secondary)
+            configuration.label
+        }
     }
 }
 struct ContentView_Previews: PreviewProvider {
@@ -176,6 +261,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 extension Array {
     func chunked(into size: Int) -> [[Element]] {
         stride(from: 0, to: count, by: size).map {

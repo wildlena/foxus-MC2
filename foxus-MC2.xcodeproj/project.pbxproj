@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33063AB52B14AD57002763A8 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB42B14AD57002763A8 /* CalenderView.swift */; };
 		33063AB72B14BE07002763A8 /* MainPageReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB62B14BE07002763A8 /* MainPageReview.swift */; };
+		33B2F91E2B1BD5D2000C01A0 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 33B2F91D2B1BD5D2000C01A0 /* Algorithms */; };
 		33F31C902B0E27710024FF95 /* foxus_MC2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C8F2B0E27710024FF95 /* foxus_MC2App.swift */; };
 		33F31C922B0E27710024FF95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F31C912B0E27710024FF95 /* ContentView.swift */; };
 		33F31C942B0E27720024FF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F31C932B0E27720024FF95 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B2F91E2B1BD5D2000C01A0 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,9 @@
 			dependencies = (
 			);
 			name = "foxus-MC2";
+			packageProductDependencies = (
+				33B2F91D2B1BD5D2000C01A0 /* Algorithms */,
+			);
 			productName = "foxus-MC2";
 			productReference = 33F31C8C2B0E27710024FF95 /* foxus-MC2.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 33F31C832B0E27710024FF95;
+			packageReferences = (
+				33B2F91C2B1BD5D2000C01A0 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 33F31C8D2B0E27710024FF95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -584,6 +592,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33B2F91C2B1BD5D2000C01A0 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33B2F91D2B1BD5D2000C01A0 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33B2F91C2B1BD5D2000C01A0 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		33F31C9A2B0E27720024FF95 /* foxus_MC2.xcdatamodeld */ = {
